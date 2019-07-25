@@ -1,0 +1,40 @@
+{
+
+  "manifest_version": 2,
+  "name": "Bookmark Reminder",
+  "version": "2.0",
+
+  "description": "Keep forgetting all those bookmarks? No more!",
+
+  "icons": {
+    "48": "icons/icon_bookmark.png"
+  },
+
+  "options_ui": {
+    "page": "options/options.html"
+  },
+
+  "permissions": [
+    "bookmarks",
+    "tabs",
+    "storage"
+  ],
+
+  "applications": {
+    "gecko": {
+      "id": "addon@example.com"
+    }
+  },
+  "browser_action": {
+    "default_icon": "icons/icon_bookmark.png",
+    "default_title": "Bookmark Reminder",
+    "default_popup": "popup/show_bookmark.html"
+  },
+
+
+  "background": {
+    "scripts": ["background-script.js"]
+  }
+
+
+}

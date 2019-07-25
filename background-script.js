@@ -10,8 +10,8 @@ function setBrowserFolders(folders){
 function getBrowserFolders(){
     return browserFolders;
 }
-function addFolderToBrowserFolders(folder){
-    browserFolders.push(folder);
+function addFolderToBrowserFolders(folder, level){
+    browserFolders.push([folder, level]);
 }
 
 // Get all folders in the browser
@@ -31,20 +31,20 @@ function extractFoldersFromBookmarkTree(bookmarkData){
 }
 
 // Each tree node should be analyzed individually
-function extractFoldersFromBookmarkTreeNode(bookmarkItem){
+function extractFoldersFromBookmarkTreeNode(bookmarkItem, level=0){
     if(bookmarkItem.type == "folder"){
         addFolderToBrowserFolders(bookmarkItem);
     }
 
     // If folder has subitems, we need to check if the sub items are also folders
-    if(bookmarkItem.children){
-        for(let child of bookmarkItem.children){
-            extractFoldersFromBookmarkTreeNode(child);
-        }
-    }
+    // if(bookmarkItem.children){
+    //     addFolderToBrowserFolders(bookmarkItem, level);
+    //     ++level;
+    //     for(let child of bookmarkItem.children){
+    //         extractFoldersFromBookmarkTreeNode(child, level);
+    //     }
+    // }
 }
-
-// Store them in a variable
 
 
 pullBrowserFolders();

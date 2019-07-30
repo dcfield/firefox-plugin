@@ -125,7 +125,7 @@ function restoreOptions(){
         }
     }
 
-    setupOptionsHtml(); 
+    setupOptionsHtml();
 
     let getSavedSettingsData = browser.storage.sync.get();
     getSavedSettingsData

@@ -1,0 +1,41 @@
+html, body {
+    width: 500px;
+    background-color: #232931;
+    color: #eeeeee;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup_title {
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #393e46;
+    margin-bottom: 10px;
+}
+
+.button {
+    color: #4ecca3;
+    background-color: #393e46;
+    padding: 4px 10px 4px 10px;
+    text-decoration: none;
+}
+
+.bookmark_link {
+    margin: 3% auto;
+    text-align: left;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+    color: #d4d4d4;
+}
+
+.bookmark_wrapper {
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.highlight {
+    color: #4ecca3;
+}
